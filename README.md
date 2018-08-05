@@ -1,2 +1,2 @@
-# Angular6TikTakTo
-Angular TikTakTo example
+# Angular6TicTacToe
+Angular TicTacToe sample example
