@@ -1,0 +1,20 @@
+<div class="tttcomponent">
+
+  <div>
+
+    <h3>
+      {{player?.name}} ({{player?.symbol}})- It's your turn
+    </h3>
+    <h1 *ngIf="this.player?.isWinner">Congratulations! You won!!</h1>
+    <h1 *ngIf="this.player?.noWinner">Refresh the page to play again.</h1>
+    <div class="tiktaktoe">
+      <a href="#">
+      <span [class.winningcell]="isWinningCell(i)" class="sqaure" [class.played]="square.player" [class.break] = "i % 3==0" (click)="checkWinner(i,square)"  *ngFor="let square of squares; let i = index" data-index="#i">
+        <app-square [square]="square">
+          {{square?.player?.symbol}}
+        </app-square>
+      </span>
+    </a>
+    </div>
+  </div>
+</div>
